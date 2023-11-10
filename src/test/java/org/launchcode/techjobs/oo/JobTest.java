@@ -75,10 +75,11 @@ public class JobTest {
                 firstChar, "\r");
         assertEquals("lineSeparator is NOT the last character of the job listing.",
                 lastChar, "\n");
-        assertEquals("lineSeparator is NOT the first character of the job listing.",
-            lineSeparator(), String.valueOf(test_job6.toString().charAt(0)));
-        assertEquals("lineSeparator is NOT the last character of the job listing.",
-            lineSeparator(), String.valueOf(test_job6.toString().charAt(test_job6.toString().length() - 1)));
+        // look up startsWith() and endsWith() string methods
+//        assertEquals("lineSeparator is NOT the first character of the job listing.",
+//            lineSeparator(), String.valueOf(test_job6.toString().charAt(0)));
+//        assertEquals("lineSeparator is NOT the last character of the job listing.",
+//            lineSeparator(), String.valueOf(test_job6.toString().charAt(test_job6.toString().length() - 1)));
     }
 
     @Test

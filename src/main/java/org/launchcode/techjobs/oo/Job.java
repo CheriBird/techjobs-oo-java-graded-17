@@ -42,6 +42,54 @@ public class Job {
     @Override
     public int hashCode( ) { return Objects.hash(getId()); }
 
+    @Override
+    public String toString() {
+        String na = "Data not available";
+        String name;
+        String employerString;
+        String locationString;
+        String positionString;
+        String competencyString;
+
+        if(this.getName() == null || this.getName().trim().isEmpty()) {
+            name = na;
+        } else {
+            name = this.getName();
+        }
+
+        if(this.getEmployer() == null ||  String.valueOf(this.getEmployer()).trim().isEmpty()) {
+            employerString = na;
+        } else {
+            employerString = String.valueOf(this.getEmployer());
+        }
+
+        if(this.getLocation() == null ||  String.valueOf(this.getLocation()).trim().isEmpty()) {
+            locationString = na;
+        } else {
+            locationString = String.valueOf(this.getLocation());
+        }
+
+        if(this.getPositionType() == null ||  String.valueOf(this.getPositionType()).trim().isEmpty()) {
+            positionString = na;
+        } else {
+            positionString = String.valueOf(this.getPositionType());
+        }
+
+        if(this.getCoreCompetency() == null ||  String.valueOf(this.getCoreCompetency()).trim().isEmpty()) {
+            competencyString = na;
+        } else {
+            competencyString = String.valueOf(this.getCoreCompetency());
+        }
+
+        return System.lineSeparator()
+            + "ID: " + this.getId() + System.lineSeparator()
+            + "Name: " + name + System.lineSeparator()
+            + "Employer: " + employerString + System.lineSeparator()
+            + "Location: " + locationString + System.lineSeparator()
+            + "Position Type: " + positionString + System.lineSeparator()
+            + "Core Competency: " + competencyString + System.lineSeparator();
+    }
+
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT
     //  nextID and id.
     public String getName( ) { return name; }

@@ -77,6 +77,8 @@ public class TestTaskFive extends AbstractTest {
     public void testToStringHandlesEmptyField() throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, NoSuchFieldException {
         Job job = createJob("Web Developer", "", "StL", "", "Java");
         String jobString = getJobString(job);
+        System.out.print("jobString:\n" + jobString);
+        System.out.print("job.toString():\n" + job.toString());
         assertEquals(jobString, job.toString());
     }
 
